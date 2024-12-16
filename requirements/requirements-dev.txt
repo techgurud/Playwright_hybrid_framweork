@@ -1,0 +1,23 @@
+# Linting and Formatting
+flake8==6.0.0                   # Linter for Python to enforce coding standards
+black==23.3.0                   # Code formatter to automatically format code to PEP 8 standards
+autopep8==2.0.1                 # Alternative Python code formatter (if preferred)
+
+# Testing Tools (useful for CI/CD and local testing)
+pytest==7.5.0                   # The core testing framework for running tests
+pytest-cov==4.0.0                # Code coverage plugin for pytest
+pytest-xdist==2.5.0              # Parallel test execution (optional for faster testing)
+pytest-mock==3.10.0              # For mocking functionality during tests
+
+# Debugging Tools
+pdb++==2.1.2                    # Enhanced Python debugger for better debugging experience
+ipdb==0.13.9                     # Interactive Python debugger (alternative to pdb)
+
+# Versioning and Dependency Management
+pip-tools==6.10.0                # Tool for managing dependencies and creating requirements files
+tox==4.6.0                       # Automate testing across multiple environments
+pre-commit==3.0.0                # A framework for managing and maintaining pre-commit hooks
+
+# CI/CD Integrations (useful in CI environments)
+pytest-html==3.2.0               # HTML reports for better test result visualization in CI
+tox-travis==2.4.0                # Plugin for integrating `tox` with Travis CI (if needed)
