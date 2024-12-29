@@ -1,0 +1,47 @@
+# config/config.yaml
+
+# Browser configuration
+browser:
+  name: 'chromium' # Options: 'chromium', 'firefox', 'webkit'
+  headless: true
+  slowMo: 50
+
+# Base URL for the application
+baseURL: 'https://example.com'
+
+# Timeout settings
+timeout:
+  navigation: 30000
+  action: 10000
+
+# Test settings
+test:
+  retries: 2
+  reporter: 'list' # Options: 'dot', 'line', 'list', 'json', 'junit', 'html'
+
+# Screenshot settings
+screenshot:
+  mode: 'on' # Options: 'on', 'only-on-failure', 'off'
+  path: 'screenshots/'
+
+# Video settings
+video:
+  mode: 'retain-on-failure' # Options: 'on', 'retain-on-failure', 'off'
+  path: 'videos/'
+
+# Trace settings
+trace:
+  mode: 'on' # Options: 'on', 'retain-on-failure', 'off'
+  path: 'traces/'
+
+# Environment variables
+env:
+  NODE_ENV: 'test'
+  API_KEY: 'your_api_key_here'
+
+# Custom settings
+custom:
+  login:
+    username: 'test_user'
+    password: 'test_password'
+    
