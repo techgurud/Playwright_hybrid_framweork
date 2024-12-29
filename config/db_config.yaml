@@ -1,0 +1,30 @@
+database:
+  host: localhost
+  port: 5432
+  name: my_database
+  user: my_user
+  password: my_password
+  pool_size: 10
+  timeout: 30
+  idle_timeout: 300
+  max_retries: 3
+  retry_delay: 1000
+  ssl: false
+  ssl_ca: ''
+  ssl_cert: ''
+  ssl_key: ''
+  ssl_reject_unauthorized: true
+  ssl_check_hostname: true
+  ssl_servername: ''
+  ssl_min_version: 'TLSv1.2'
+  ssl_max_version: 'TLSv1.3'
+  ssl_ciphers: ''
+  ssl_ecdh_curve: ''
+  ssl_dhparam: ''
+  ssl_handshake_timeout: 10000
+  ssl_request_cert: false
+  ssl_require_cert: false
+  ssl_cert_verification: false
+  ssl_cert_authority: ''
+  ssl_cert_authority_path: ''
+ 

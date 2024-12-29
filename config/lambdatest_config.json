@@ -1,0 +1,34 @@
+{
+    "lambdatest_auth": {
+        "username": "your_username",
+        "access_key": "your_access_key"
+    },
+    "browsers": [
+        {
+            "browser": "chrome",
+            "platform": "Windows 10",
+            "versions": ["latest", "latest-1"]
+        },
+        {
+            "browser": "firefox",
+            "platform": "Windows 10",
+            "versions": ["latest", "latest-1"]
+        },
+        {
+            "browser": "safari",
+            "platform": "macOS Big Sur",
+            "versions": ["latest", "latest-1"]
+        }
+    ],
+    "run_settings": {
+        "Playwright_config_file": "Playwright_config.json",
+        "build_name": "LambdaTest Sample Build",
+        "project_name": "LambdaTest Sample Project",
+        "exclude": [],
+        "parallels": 5
+    },
+    "tunnel_settings": {
+        "tunnel": false,
+        "tunnel_name": null
+    }
+}
