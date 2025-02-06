@@ -1,5 +1,5 @@
 # General Python packages
-pytest==7.5.0                       # Python testing framework for running tests
+pytest==8.3.4                       # Python testing framework for running tests
 pytest-html==3.2.0                   # HTML report generation for pytest
 pytest-xdist==2.5.0                  # For parallel test execution (optional)
 requests==2.28.2                    # HTTP library for API calls (for LambdaTest or other web services)
@@ -11,52 +11,6 @@ playwright-cli==1.34.0               # Playwright command line interface (for br
 psutil==5.9.4                        # For Playwright's headless browser requirements
 
 
-# LambdaTest integration
-lambdatest-python==1.7.1             # LambdaTest integration library for Python
-pytest-lambdatest==1.0.0             # LambdaTest plugin for pytest
+                      # For generating fake data in tests (optional)
 
-
-# Oracle DB client
-cx_Oracle==8.3.0                     # Oracle DB client for connecting to Oracle databases
-oracledb==1.0.0                      # Oracle DB client for Python (use as required)
-
-# Logging & Reporting
-loguru==0.6.0                        # Logger for detailed logs (alternative to default logging module)
-pytest-logger==0.4.0                 # For logging in pytest
-
-
-# Utilities and Web Scraping
-selenium==4.5.0                      # For web automation (if needed for other browsers besides Playwright)
-pandas==1.5.0                        # For data manipulation and data-driven testing (optional)
-beautifulsoup4==4.10.0               # For web scraping (optional)
-lxml==4.7.1                          # For parsing HTML and XML (optional)
-
-
-# Browser Drivers (if running locally and not using LambdaTest)
-chromedriver-autoinstaller==0.2.2    # Auto-installs Chrome driver for Playwright usage
-geckodriver-autoinstaller==0.3.0     # Auto-installs Firefox driver for Playwright
-
-
-
-# CI/CD Integration (for executing tests on CI servers)
-pytest-cov==3.0.0                    # For coverage reporting in pytest
-pytest-sugar==0.9.7                  # For better test output in pytest
-pytest-timeout==2.0.1                # For setting timeouts in tests
-pytest-rerunfailures==10.0           # For rerunning failed tests in pytest
-pytest-ordering==0.6                  # For ordering tests in pytest
-pytest-dependency==0.5.1             # For test dependencies in pytest
-pytest-parallel==0.0.2               # For parallel test execution in pytest
-pytest-logger==0.4.0                 # For logging in pytest
-pytest-variables==2.0.0              # For managing test variables in pytest
-pytest-html-reporter==2.0.0          # For HTML reporting in pytest
-pytest-metadata==1.11.0              # For metadata in pytest
-pytest-azurepipelines==0.9.0         # For Azure Pipelines integration in pytest
-pytest-junitxml==0.9.0               # For JUnit XML reporting in pytest   
-pytest-slack==2.0.0                  # For Slack notifications in pytest
-
-
-# Other utilities (optional)
-requests_mock==1.9.3                 # For mocking HTTP requests in tests (optional)
-faker==9.0.2                         # For generating fake data in tests (optional)
-```
 
