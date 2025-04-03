@@ -89,14 +89,14 @@ cd test-automation-framework
 Create and activate a Python virtual environment:
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate  # On Windows, use venv\Scripts\activate
 ```
 
 Install required dependencies from `requirements.txt`:
 
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### 3. Configure the framework:
