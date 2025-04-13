@@ -1,17 +1,58 @@
-# General Python packages
-pytest==8.3.4                       # Python testing framework for running tests
-pytest-html==3.2.0                   # HTML report generation for pytest
-pytest-xdist==2.5.0                  # For parallel test execution (optional)
-requests==2.28.2                    # HTTP library for API calls (for LambdaTest or other web services)
+# Web Automation
+#selenium==4.16.0
+#webdriver-manager==4.0.0
+playwright==1.39.0
+
+# Reporting
+allure-pytest==2.13.2
+pytest-html==3.2.0
+
+# Excel/JSON/YAML handling
+openpyxl==3.1.2
+pyyaml==6.0.1
+
+# Logging and Utilities
+loguru==0.7.2
+faker==37.1.0
+requests==2.31.0
+# Data handling
+pandas==2.0.3
+# Data validation
+#jsonschema==4.18.0
+# Data generation
+#faker==13.3.4
+# API testing
+#requests==2.31.0
+# Web scraping
+#beautifulsoup4==4.12.2
+# Data visualization
+#matplotlib==3.7.1
+# Data manipulation
+#numpy==1.24.4
+# Data analysis
+#scipy==1.11.2
+# Web framework
+#flask==2.3.3
+# Web scraping
+#scrapy==2.6.1
+# Web testing
+#pytest==7.4.0
 
 
-# Playwright dependencies for browser automation
-playwright==1.34.0                   # Playwright for Python (browser automation)
-playwright-cli==1.34.0               # Playwright command line interface (for browser setup)
-psutil==5.9.4                        # For Playwright's headless browser requirements
+# CI/CD and notifications
+#python-dotenv==1.0.0
+#slack_sdk==3.21.3
 
+# Database
+#mysql-connector-python==8.3.0
+#pymongo==4.6.1
 
+# Test framework
+pytest==8.1.1
+pytest-xdist==3.6.1
+pytest-rerunfailures ==15.0
 
-                      # For generating fake data in tests (optional)
+# Retry and wait utils
+tenacity==9.1.2
 
 

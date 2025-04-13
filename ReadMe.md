@@ -24,6 +24,15 @@ The framework is designed to provide robust and scalable test automation solutio
 - **End-to-End Web Testing** using Playwright.
 - **Cross-Browser Testing** through LambdaTest integration.
 - **Database Validation** with Oracle DB.
+- 🔁 **API Testing** with `requests` and schema validation
+- 📊 **Allure & HTML Reports**
+- 🗃️ **Data-driven** (Excel, JSON, YAML)
+- 🧪 **Pytest** test runner with plugins
+- 🚀 **CI/CD Ready** (Jenkins, GitHub Actions)
+- 🔄 **Retry + Wait + Logger utilities**
+- 🔧 **Environment Management**
+- 📬 **Email + Slack Notifications**
+- 🧩 Easy to extend and plug into enterprise pipelines
 
 It allows easy integration of automated tests into continuous integration (CI) pipelines, including support for cloud-based services like **LambdaTest** for parallel cross-browser testing.
 
@@ -48,19 +57,69 @@ This framework utilizes the following technologies:
 The framework is organized as follows:
 
 ```
-/test-automation-framework
-├── /config                        # Configuration files (Playwright, LambdaTest, Oracle DB, etc.)
-├── /drivers                       # Browser drivers and LambdaTest configuration
-├── /tests                         # Test cases (Login, Search, Database validation)
-├── /pages                         # Page Object Model (POM) design for Playwright
-├── /keywords                      # Reusable keyword-driven test components
-├── /utils                         # Utility functions for Playwright, DB, LambdaTest, etc.
-├── /testdata                      # Test data for data-driven testing
-├── /reports                       # Test reports and logs
-├── /scripts                       # Automation scripts for setup, execution, and reporting
-├── /requirements                  # Python dependencies
-├── /testsuite                     # Pytest configuration
-└── README.md                      # Framework documentation
+project_root/
+├── config/                             # Configuration management
+│   ├── config.yaml                   # App/environment settings like URLs, credentials
+│   ├── environment_manager.py       # Manages environment switching (dev, QA, prod)
+│   └── config_reader.py             # Reads and provides access to config values
+│
+├── drivers/                            # WebDriver or browser setup
+│   └── browser_manager.py           # Handles browser initialization and configuration
+│
+├── utils/                               # Utility and helper functions
+│   ├── logger.py                     # Logging (console and file)
+│   ├── wait_utils.py                # Explicit and smart wait wrappers
+│   ├── element_utils.py             # Click, input, visibility checks etc.
+│   ├── assertion_utils.py           # Hard and soft assertion wrappers
+│   ├── date_time_utils.py           # Time and date manipulation utilities
+│   ├── random_data_generator.py     # Fake/test data generation
+│   ├── file_utils.py                # File operations (read/write JSON, Excel, etc.)
+│   ├── screenshot_utils.py          # Capture screenshots (failures/debug)
+│   ├── exception_handler.py         # Centralized exception capture and logging
+│   ├── retry_utility.py             # Retry logic for flaky scenarios
+│   ├── validation_utils.py          # Common validators (email format, range, etc.)
+│   └── service_locator.py           # Dependency injector to decouple logic
+│
+├── data/                                # Test data sources
+│   ├── test_data.json               # Static JSON-based test data
+│   ├── excel_data.xlsx              # Structured data in Excel
+│   ├── data_reader.py              # Reader class for JSON/Excel
+│   └── json_yaml_parser.py         # Common parser for JSON/YAML files
+│
+├── api_utils/                            # API testing components
+│   ├── api_client.py               # Base class for REST calls (GET/POST/PUT/DELETE)
+│   ├── api_validator.py            # Schema and response assertion methods
+│   └── mock_server_helper.py       # Stub/mocking support for API testing
+│
+├── db_utils/                             # Database access layer
+│   ├── sql_connector.py            # SQL (MySQL, Postgres, etc.) DB connector
+│   └── nosql_connector.py          # NoSQL (MongoDB, etc.) DB connector
+│
+├── reports/                             # Reporting and result sharing
+│   ├── html_reporter.py            # Custom HTML reporting logic
+│   ├── result_parser.py            # Parses test results to readable formats
+│   ├── email_reporter.py           # Emails reports and test summary
+│   └── allure_report_config.xml    # Allure integration config file
+│
+├── ci_cd/                               # CI/CD pipeline integration
+│   ├── test_runner.py              # Main orchestrator to run test suites
+│   ├── ci_trigger.py               # Integrate with Jenkins/GitLab etc.
+│   └── notifier.py                 # Notify via Slack/Teams/email
+│
+├── tests/                                # Actual test cases
+│   ├── test_login.py               # Test for login functionality
+│   └── test_checkout.py            # Test for checkout flow
+│
+├── pages/                                # Page Object Model (POM)
+│   ├── login_page.py              # Login page actions and locators
+│   ├── dashboard_page.py          # Dashboard page POM
+│   └── base_page.py               # Generic functions for all pages
+│
+├── resources/                            # Static files like locators
+│   └── locators.yaml              # XPath/CSS selectors for POM use
+│
+├── requirements.txt                     # Python package dependencies
+└── README.md                            # Project documentation and usage
 ```
 
 ---
